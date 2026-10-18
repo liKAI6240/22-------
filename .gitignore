@@ -37,3 +37,9 @@ Makefile.win
 env/code_filelist.h
 
 # pic\ 是测试图集，要跟着工程一起走，不要忽略
+
+# ---- 编辑器（VS Code）----
+# 注意：不忽略整个 .vscode\ 目录。任务/调试配置如果放进这里，是要跟着工程走的。
+#       只忽略 VS Code 自己产生的日志和多根工作区文件。
+.vscode/*.log
+*.code-workspace
