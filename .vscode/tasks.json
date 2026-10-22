@@ -1,0 +1,70 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "视觉: 编译 Debug",
+            "type": "process",
+            "command": "cmd.exe",
+            "args": [
+                "/d",
+                "/c",
+                "${workspaceFolder}\\.vscode\\build.cmd",
+                "norun"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "视觉: 编译 Release",
+            "type": "process",
+            "command": "cmd.exe",
+            "args": [
+                "/d",
+                "/c",
+                "${workspaceFolder}\\.vscode\\build.cmd",
+                "Release",
+                "norun"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "视觉: 编译并运行",
+            "type": "process",
+            "command": "${workspaceFolder}/Liumian-SimuEnv/VS/x64/Debug/visual_simu.exe",
+            "options": {
+                "cwd": "${workspaceFolder}/Liumian-SimuEnv/"
+            },
+            "dependsOn": "视觉: 编译 Debug",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "视觉: 混合编译自检",
+            "type": "process",
+            "command": "powershell.exe",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${workspaceFolder}/Liumian-SimuEnv/tools/verify_mixed.ps1"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/Liumian-SimuEnv/"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

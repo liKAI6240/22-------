@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "视觉仿真 (Debug x64)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/VS/x64/Debug/visual_simu.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/",
+            "environment": [],
+            "console": "integratedTerminal",
+            "preLaunchTask": "视觉: 编译 Debug",
+            "symbolSearchPath": "${workspaceFolder}/VS/x64/Debug"
+        },
+        {
+            "name": "视觉仿真 (Release x64)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/VS/x64/Release/visual_simu.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/",
+            "environment": [],
+            "console": "integratedTerminal",
+            "preLaunchTask": "视觉: 编译 Release",
+            "symbolSearchPath": "${workspaceFolder}/VS/x64/Release"
+        }
+    ]
+}

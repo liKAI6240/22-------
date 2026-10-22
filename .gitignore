@@ -1,0 +1,74 @@
+# Code-only repository: ignore files unless explicitly allowed below.
+# Keep directories traversable so new source files can be discovered.
+*
+!*/
+
+# C/C++ and Python source code
+!*.c
+!*.h
+!*.cpp
+!*.hpp
+!*.cc
+!*.hh
+!*.cxx
+!*.hxx
+!*.inl
+!*.py
+
+# Build scripts and project files
+!*.ps1
+!*.bat
+!*.cmd
+!*.sh
+!*.cmake
+!CMakeLists.txt
+!Makefile
+!requirements*.txt
+!pyproject.toml
+!*.spec
+!*.sln
+!*.vcxproj
+!*.vcxproj.filters
+!*.vcxproj.user
+!*.props
+!*.targets
+!*.dev
+
+# Shared editor settings, documentation and licensing
+!**/.vscode/*.json
+!*.md
+!/.gitignore
+!**/.gitignore
+!/.gitattributes
+!/.editorconfig
+!/LICENSE
+!/NOTICE
+
+# Resources and generated directories stay local.
+# These exclusions also cover source-like files inside generated output.
+/资源备份/
+**/pic/
+**/.vs/
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/build/
+**/dist/
+**/dist_onefile/
+**/build_onefile/
+**/build_exe/
+**/build_od/
+**/build_of/
+**/_internal/
+**/output/
+**/_export/
+**/VS/x64/
+**/VS/visual_simu/
+**/单文件版/
+
+# Generated files with source-like extensions
+Makefile.win
+*.tmp.*
+*.bak.*
